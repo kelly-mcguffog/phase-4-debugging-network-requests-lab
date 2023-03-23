@@ -63,11 +63,18 @@ developing your own process.
 - Add a new toy when the toy form is submitted
 
   - How I debugged:
+  - error: Failed to load resource: the server responded with a status of 500 (Internal Server Error)
+  - NameError (uninitialized constant ToysController::Toys)
+  - Solution: Toy should not be pluralized
 
 - Update the number of likes for a toy
 
   - How I debugged:
+  - error: Uncaught (in promise) SyntaxError: Unexpected end of JSON input
+  - Solution: Missing render json: toy
 
 - Donate a toy to Goodwill (and delete it from our database)
 
   - How I debugged:
+  - error: ActionController::RoutingError (No route matches [DELETE] "/toys 1"):
+  - Solution: Add :destroy to routes
